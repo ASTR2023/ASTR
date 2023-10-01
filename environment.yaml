@@ -1,0 +1,16 @@
+name: loftr2
+channels:
+  # - https://dx-mirrors.sensetime.com/anaconda/cloud/pytorch
+  - pytorch
+  - conda-forge
+  - defaults
+  - pyg
+dependencies:
+  - python=3.8
+  - cudatoolkit=11.1
+  - pytorch=1.8.1
+  - pytorch-scatter
+  - numba
+  - pip
+  - pip:
+      - -r requirements.txt
