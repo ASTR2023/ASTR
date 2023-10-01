@@ -1,6 +1,5 @@
-name: loftr2
+name: astr
 channels:
-  # - https://dx-mirrors.sensetime.com/anaconda/cloud/pytorch
   - pytorch
   - conda-forge
   - defaults

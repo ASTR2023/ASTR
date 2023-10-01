@@ -32,7 +32,7 @@ This work is highly dependent on [LoFTR](https://zju3dv.github.io/loftr/). Thank
 ## License
 
 ```
-Copyright Jiahuan Yu <yjh.cs.1998@gmail.com>. All Rights Reserved.
+Copyright (c) 2023 ASTR2023. All Rights Reserved.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

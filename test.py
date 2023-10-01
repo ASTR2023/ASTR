@@ -9,7 +9,7 @@ from src.config.default import get_cfg_defaults
 from src.utils.profiler import build_profiler
 
 from src.lightning.data import MultiSceneDataModule
-from src.lightning.lightning_loftr import PL_LoFTR
+from src.lightning.lightning_astr import PL_ASTR
 
 
 def parse_args():
@@ -52,14 +52,14 @@ if __name__ == '__main__':
 
     # tune when testing
     if args.thr is not None:
-        config.LOFTR.MATCH_COARSE.THR = args.thr
+        config.ASTR.MATCH_COARSE.THR = args.thr
 
     loguru_logger.info(f"Args and config initialized!")
 
     # lightning module
     profiler = build_profiler(args.profiler_name)
-    model = PL_LoFTR(config, pretrained_ckpt=args.ckpt_path, profiler=profiler, dump_dir=args.dump_dir)
-    loguru_logger.info(f"LoFTR-lightning initialized!")
+    model = PL_ASTR(config, pretrained_ckpt=args.ckpt_path, profiler=profiler, dump_dir=args.dump_dir)
+    loguru_logger.info(f"ASTR-lightning initialized!")
 
     # lightning data
     data_module = MultiSceneDataModule(args, config)
